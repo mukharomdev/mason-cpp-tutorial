@@ -3,5 +3,8 @@ project('meson-cpp-tutorial', 'cpp',
   default_options : ['warning_level=3', 'cpp_std=c++14'])
 
 executable('learncpp',
-           './src/main.cc',
+           'src/main.cc',
+           'src/tambah.cc',
+           dependencies : [
+              dependency('pkg-config')],
            install : true)
