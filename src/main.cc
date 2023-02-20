@@ -1,6 +1,7 @@
 #include <iostream>
+using namespace std;
 
-int main(int argc, char const *argv[])
+int main()
 {
 	cout << "ini file percobaan" << endl;
 	return 0;

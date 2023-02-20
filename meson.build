@@ -3,8 +3,5 @@ project('meson-cpp-tutorial', 'cpp',
   default_options : ['warning_level=3', 'cpp_std=c++14'])
 
 executable('learncpp',
-           '.',
-           dependencies : [
-              dependency('include'),
-              dependency('third_party')],
+           './src/main.cc',
            install : true)
