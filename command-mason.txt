@@ -1,0 +1,41 @@
+#init  configuration file using cli
+CC=clang CXX=clang++ meson init .  -n meson-cpp-tutorial -e learncpp -l cpp  --builddir build -d include,third_party  --type executable  --force
+
+
+# setup build directory
+CC=clang CXX=clang++ meson setup build
+
+
+
+
+/*
+
+usage: meson init [-h] [-C WD] [-n NAME] [-e EXECUTABLE] [-d DEPS]
+                  [-l {c,cpp,cs,cuda,d,fortran,java,objc,objcpp,rust}] [-b]
+                  [--builddir BUILDDIR] [-f] [--type {executable,library}]
+                  [--version VERSION]
+                  [sourcefile ...]
+
+positional arguments:
+  sourcefile                            source files. default: all recognized
+                                        files in current directory
+
+optional arguments:
+  -h, --help                            show this help message and exit
+  -C WD                                 directory to cd into before running
+  -n NAME, --name NAME                  project name. default: name of current
+                                        directory
+  -e EXECUTABLE, --executable EXECUTABLE
+                                        executable name. default: project name
+  -d DEPS, --deps DEPS                  dependencies, comma-separated
+  -l {c,cpp,cs,cuda,d,fortran,java,objc,objcpp,rust}, --language {c,cpp,cs,cuda,d,fortran,java,objc,objcpp,rust}
+                                        project language. default: autodetected
+                                        based on source files
+  -b, --build                           build after generation
+  --builddir BUILDDIR                   directory for build
+  -f, --force                           force overwrite of existing files and
+                                        directories.
+  --type {executable,library}           project type. default: executable based
+                                        project
+
+ */
