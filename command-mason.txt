@@ -5,6 +5,8 @@ CC=clang CXX=clang++ meson init .  -n meson-cpp-tutorial -e learncpp -l cpp  --b
 # setup build directory
 CC=clang CXX=clang++ meson setup build
 
+#configure 
+meson configure --bindir build --datadir src --includedir include
 
 
 
