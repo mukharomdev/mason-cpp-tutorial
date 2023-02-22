@@ -1,1 +1,0 @@
-inline int tambah(int a,int b);

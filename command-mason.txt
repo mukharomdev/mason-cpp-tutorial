@@ -1,5 +1,5 @@
 #init  configuration file using cli
-CC=clang CXX=clang++ meson init .  -n meson-cpp-tutorial -e learncpp -l cpp  --builddir build -d include,third_party  --type executable  --force
+CC=clang CXX=clang++ meson init .  -n meson-cpp-tutorial -e learncpp -l cpp  --builddir build  --type executable  --force
 
 
 # setup build directory

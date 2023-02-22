@@ -1,5 +1,5 @@
-#include "main.hpp"
+#include "main.h"
 
-inline int tambah(int a,int b){
+int tambah(int a,int b){
 	return a + b;
 }

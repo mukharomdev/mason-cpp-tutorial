@@ -1,9 +1,9 @@
 #include <iostream>
-#include "main.hpp"
+#include "main.h"
 using namespace std;
 
 int main()
-{
-	cout << "ini file percobaan"<<tambah(2,3) << endl;
+{   int result = tambah(2,19);
+	cout << "2 + 19 =\t"<<result<< endl;
 	return 0;
 }
