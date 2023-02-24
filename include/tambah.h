@@ -1,1 +1,1 @@
-int tambah(int a,int b);
+ int tambah(int a,int b) ;
