@@ -1,4 +1,5 @@
 #include <iostream>
+#include <threads.h>
 #include "main.h"
 
 using namespace std;
@@ -10,5 +11,6 @@ int main()
 	int x[MAX] = {size}; // uses the constant and the read-only variable
     state = 7;           // modifies state in flib.c
     f();                // calls f() in tambah.cc
+    cout << " " << endl;
 	return 0;
 }
