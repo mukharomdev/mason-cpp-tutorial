@@ -13,3 +13,4 @@ learn cpp using mason build system
 resources ;
 
 1. asm : http://www.ibiblio.org/gferg/ldp/GCC-Inline-Assembly-HOWTO.html#ss5.1
+2. meson build system : https://mesonbuild.com/
