@@ -1,6 +1,6 @@
 #ifndef LIB_MAIN
 #define LIB_MAIN
-#if defined(__linux__) && __GLIBCXX__ >= 201403
+#if defined(__linux__) && defined(__cplusplus)
 #include "basic/basic.h"
 #include "oop/oop.h"
 #include <cstring>

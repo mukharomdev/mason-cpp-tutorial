@@ -40,7 +40,7 @@ endif
 learncpp = executable('learncpp',
            main_sources,
   include_directories : inc,
-  link_with:[basiclib],
+  link_with:[basiclib,ooplib],
   install : true)
 
 #### test #####
