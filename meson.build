@@ -7,6 +7,8 @@ project('meson-cpp-tutorial', 'cpp',
 #
 main_sources = []
 header_sources = []
+basic_sources =[]
+oop_sources = []
 # set directory
 
 inc = include_directories('include')
@@ -38,7 +40,7 @@ endif
 learncpp = executable('learncpp',
            main_sources,
   include_directories : inc,
-  link_with:mathlib,
+  link_with:[basiclib],
   install : true)
 
 #### test #####
