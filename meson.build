@@ -1,7 +1,7 @@
 #### setup inisial project ####
 
 project('meson-cpp-tutorial', 'cpp',
-  version : '0.1',
+  version : '0.0.1',
   default_options : ['warning_level=3','cc=clang','cxx=clang++','prefix=/usr/local','buildtype=debugoptimized','cpp_std=c++14'])
 
 #
@@ -14,7 +14,7 @@ oop_sources = []
 inc = include_directories('include')
 subdir('include')
 subdir('src')
-subdir('docs')
+
 subdir('third_party')
 
 dir_base = meson.current_source_dir()
@@ -33,6 +33,22 @@ if get_option('enable-tests')
 endif
 if get_option('enable-benchmarks')
 	subdir('benchmarks')
+endif
+
+# setup documentation
+
+pymod = import('python')
+python3 = pymod.find_installation('python3', required: false)
+
+if python3.found()
+	python3_path = python3.get_variable('BINDIR') / python3.get_variable('PYTHON') + python3.language_version()
+
+	sphinx = find_program('sphinx-build', 'sphinx-build-3', 'sphinx-build-' + python3.language_version(), required: false)
+
+endif
+
+if sphinx.found()
+	subdir('docs')
 endif
 
 
