@@ -3,18 +3,37 @@
 #include <string>
 #include <iostream>
 using namespace std;
+// class animal as base class
 class Animal
 {
 	private :
-	string nama;
+    string nama;
 	int kaki;
 
 	public:
-	Animal();
-	~Animal(){cout << "destructor"<< endl;};
-	void setKaki(int setkaki);
-	int getKaki(void);
+	 Animal();
+	virtual ~Animal(){cout << "destructor Animal"<< endl;};
+	virtual void setKaki(int setkaki)=0;
+	virtual int getKaki(void)=0;
 	
+};
+
+// derived class
+class Mamalia : public Animal{
+private:
+	string nama ;
+	int kaki ;
+
+public:
+	//ctor
+	Mamalia();
+	//dtor
+	~Mamalia()override{cout << "destructor Mamalia"<<endl;};
+
+	// member function
+	void setKaki(int setkaki) override;
+	int getKaki(void) override;
+
 };
 
 #endif
